@@ -1,0 +1,3 @@
+module DispatchRiderHandlerAsActiveJob
+  VERSION = "0.1.0"
+end
