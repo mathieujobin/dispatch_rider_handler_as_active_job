@@ -1,6 +1,13 @@
 require "dispatch_rider_handler_as_active_job/version"
 
-module DispatchRiderHandlerAsActiveJob
-  class Error < StandardError; end
-  # Your code goes here...
+module DispatchRider
+  module Handlers
+    class Base < ActiveJob::Base
+      def perform(*args)
+	warn "DEPRECATED: you should just inherit directly from ActiveJob::Base and not use me."
+        process(*args)
+      end
+    end
+  end
 end
+
