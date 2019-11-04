@@ -26,6 +26,10 @@ I use sidekiq, and going to test only with sidekiq.
 * set your ActiveJob queue_adapter to be your new favorite one, `:sidekiq` in my case
 * Change all your DispatchRider::Handlers::Base subclasses to inherit ActiveJob::Base instead
 * rename `process` to be `perform`
+* Make sure all rake tasks and process has a replacement
+
+## TODO
+* Need solution for `DispatchRider::Publisher::Base` classes
 
 ## Installation
 
