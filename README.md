@@ -17,6 +17,16 @@ All `DispatchRider::Handlers::Base` subclasses should then be run via ActiveJob:
 
 I use sidekiq, and going to test only with sidekiq.
 
+## Remove DispatchRider
+
+* remove `dispatch-rider` and `activejob-dispatch_rider` from your Gemfile
+* remove any DispatchRider config/initializer you might have
+* remove the `script/dispatch_rider` if you had one
+* remove any Rake tasks you had associated with `DispatchRider`
+* set your ActiveJob queue_adapter to be your new favorite one, `:sidekiq` in my case
+* Change all your DispatchRider::Handlers::Base subclasses to inherit ActiveJob::Base instead
+* rename `process` to be `perform`
+
 ## Installation
 
 Add this line to your application's Gemfile:
