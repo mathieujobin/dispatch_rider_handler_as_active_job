@@ -30,6 +30,7 @@ I use sidekiq, and going to test only with sidekiq.
 
 ## TODO
 * Need solution for `DispatchRider::Publisher::Base` classes
+* `work_off_dispatch_jobs` this one will be painful...
 
 ## Installation
 
