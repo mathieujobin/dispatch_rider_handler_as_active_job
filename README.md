@@ -27,6 +27,7 @@ I use sidekiq, and going to test only with sidekiq.
 * Change all your DispatchRider::Handlers::Base subclasses to inherit ActiveJob::Base instead
 * rename `process` to be `perform`
 * Make sure all rake tasks and process has a replacement
+* params often are accessed via string keys, active_job uses symbols. you might want to stringify or use with_indiferent_access
 
 ## TODO
 * Need solution for `DispatchRider::Publisher::Base` classes
